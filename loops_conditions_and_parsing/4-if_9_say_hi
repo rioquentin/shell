@@ -3,7 +3,7 @@
 x=1
 while [ $x -le 11 ]
 do
-	if [ $x -eq 9 ]; then 
+	if [ $x -eq 10 ]; then 
 		echo "Hi"; 
 	else	
 		echo "Best School";
