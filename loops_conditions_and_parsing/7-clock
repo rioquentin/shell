@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+#Clock
+x=0
+n=0
+echo "Hour: $n"
+while [ $n -ne 13 ];
+do 
+  ((x++)) 
+  if [ $x == 60 ];
+  then
+    n=$((n+1))
+    echo "Hour: $n"
+    x=0
+  else
+    echo $x
+  fi
+done
