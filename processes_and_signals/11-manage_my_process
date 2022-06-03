@@ -1,19 +1,19 @@
 #!/usr/bin/env bash
 #function and case
 
-start(){
+start () {
     ./manage_my_process &
     echo "$!" >> /var/run/my_process.pid
     echo "manage_my_process started"
 }
 
-stop (){
+stop () {
     pkil -f manage_my_process
     rm /var/run/my_process.pid
     echo "manage_my_process stopped"
 }
 
-restart(){
+restart () {
     pkil -f manage_my_process
     rm /var/run/my_process.pid
     ./manage_my_process &
@@ -23,13 +23,13 @@ restart(){
 
 case $1 in
 
-    start)
+    "start")
         start
         ;;
-    stop)
+    "stop")
         stop
         ;;
-    restart)
+    "restart")
         restart
         ;;
     *)
