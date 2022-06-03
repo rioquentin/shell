@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#Infinite loop for task 10
+while :
+do
+echo "I am alive!" >> /tmp/my_process 
+sleep 2
+done
