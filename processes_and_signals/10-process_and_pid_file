@@ -7,4 +7,4 @@ do
 done
 trap "echo I hate the kill command" 15
 trap "echo Y U no love me?!" 2
-trap "rm /var/run/myscript.pid" EXIT
+trap "rm /var/run/myscript.pid ; exit" 
