@@ -8,13 +8,13 @@ start () {
 }
 
 stop () {
-    pkil -f manage_my_process
+    pkil -15 manage_my_process
     rm /var/run/my_process.pid
     echo "manage_my_process stopped"
 }
 
 restart () {
-    pkil -f manage_my_process
+    pkil -15 manage_my_process
     rm /var/run/my_process.pid
     ./manage_my_process &
     echo "$!" >> /var/run/my_process.pid
